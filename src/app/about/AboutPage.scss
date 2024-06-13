@@ -1,0 +1,12 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
+
+.about-page {
+  .about-page-container {
+    .about-page-image-container {
+      .user-image {
+        object-fit: contain;
+      }
+    }
+  }
+}

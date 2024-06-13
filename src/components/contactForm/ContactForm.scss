@@ -1,0 +1,76 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
+
+.contact-form-wrapper {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  column-gap: 1rem;
+
+  .contact-sidebar {
+    background-color: #bde0fe;
+    @include shadow2;
+
+    .contact-sidebar-title {
+      @include subTitle;
+      padding: 1rem;
+    }
+    .contact-sidebar-ul {
+      @include flexColumn;
+      gap: 2rem;
+      padding: 1rem;
+    }
+  }
+
+  .contact-form {
+    @include flexColumn;
+    @include shadow2;
+
+    .contact-form-title {
+      @include subTitle;
+    }
+
+    .inputs-wrapper {
+      @include twoGridTemplateEqualColumns;
+    }
+
+    .input-container {
+      @include inputContainer;
+
+      .input-field {
+        @include inputField;
+
+        &::placeholder {
+          color: $gray;
+        }
+      }
+
+      .input-label {
+        @include inputLabel;
+      }
+
+      .input-highlight {
+        @include inputHighlight;
+      }
+
+      .input-field:focus + .input-label {
+        @include focusInputFieldAndInputLabel;
+      }
+
+      .input-field:focus + .input-label + .input-highlight {
+        width: 100%;
+      }
+
+      .icon {
+        @include inputIcon;
+      }
+    }
+
+    .main-form-btn {
+      @include button1;
+
+      .loading {
+        @include loader;
+      }
+    }
+  }
+}

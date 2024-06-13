@@ -1,0 +1,13 @@
+@import "../../../styles/Variables.scss";
+@import "../../../styles/Mixins.scss";
+
+.register-page {
+  .register-page-container {
+    width: 60%;
+    margin: auto;
+
+    .register-page-title {
+      @include title;
+    }
+  }
+}

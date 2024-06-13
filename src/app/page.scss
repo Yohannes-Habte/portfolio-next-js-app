@@ -1,0 +1,21 @@
+@import "../styles/Variables.scss";
+@import "../styles/Mixins.scss";
+
+.home-page {
+  .home-page-container {
+    .home-page-title {
+    }
+
+    .home-page-sections-wrapper {
+      .user-profile-and-mission {
+        .user-profile {
+          .image-container {
+            .user-photo {
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
+
+.about-me-form-wrapper {
+  .about-me-form-title {
+    @include title;
+  }
+
+  .about-me-form {
+    @include flexColumn;
+
+    .inputs-wrapper {
+      @include twoGridTemplateEqualColumns;
+    }
+
+    .input-container {
+      @include inputContainer;
+
+      .input-field {
+        @include inputField;
+
+        &::placeholder {
+          color: $gray;
+        }
+      }
+
+      .input-label {
+        @include inputLabel;
+      }
+
+      .input-highlight {
+        @include inputHighlight;
+      }
+
+      .input-field:focus + .input-label {
+        @include focusInputFieldAndInputLabel;
+      }
+
+      .input-field:focus + .input-label + .input-highlight {
+        width: 100%;
+      }
+
+      .icon {
+        @include inputIcon;
+      }
+    }
+
+    .main-form-btn {
+      @include button1;
+
+      .loading {
+        @include loader;
+      }
+    }
+  }
+}

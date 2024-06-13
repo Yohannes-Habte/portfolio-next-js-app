@@ -1,0 +1,21 @@
+@import "../../../styles/Variables.scss";
+@import "../../../styles/Mixins.scss";
+
+.login-page {
+  .login-page-container {
+    width: 60%;
+    margin: auto;
+
+    .login-page-title {
+      @include title;
+    }
+
+    .github-login-form {
+      margin-top: 1rem;
+
+      .login-github-btn {
+        @include button2;
+      }
+    }
+  }
+}

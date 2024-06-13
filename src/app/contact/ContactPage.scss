@@ -1,0 +1,13 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
+
+
+.contact-page {
+   
+    .contact-page-container {
+
+        .contact-page-title {
+            @include title;
+        }
+    }
+}

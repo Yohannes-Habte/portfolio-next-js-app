@@ -1,0 +1,49 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
+
+.navbar {
+  .navbar-items-wrapper {
+    @include flexRow;
+    gap: 4rem;
+  }
+
+  .navbar-items {
+    @include flexRow;
+    align-items: center;
+    gap: 2rem;
+
+    .active-navbar-item {
+      position: relative;
+      .navbar-item-link {
+        color: $red;
+      }
+
+      .navbar-item-link::before {
+        content: "";
+        position: absolute;
+        bottom: -1rem;
+        height: 2px;
+        width: 100%;
+        background-color: red;
+      }
+    }
+
+    .passive-navbar-item {
+      .navbar-item-link {
+        color: $black;
+      }
+    }
+
+    .header-btn {
+      @include button2;
+    }
+  }
+
+  .navbar-account-items {
+    @include flexRow;
+  }
+
+  .navbar-logout-btn {
+    @include button2;
+  }
+}
