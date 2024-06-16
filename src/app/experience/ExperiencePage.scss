@@ -1,0 +1,37 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
+
+.experience-page {
+  background-color: #edf6f9;
+  .experience-page-container {
+    .experience-page-title {
+      @include title;
+    }
+
+    .all-experience-wrapper {
+      @include gridThreeColumns;
+      .experience-wrapper {
+        background-color: #cde2f5;
+        @include shadow2;
+
+        .experience-title {
+          @include subTitle;
+          padding-left: 1rem 
+        }
+
+        .asides-box-container {
+          @include twoGridTemplateEqualColumns;
+        
+          padding: 1rem;
+          .aside-box {
+            .subtitle {
+            }
+
+            .experience-level {
+            }
+          }
+        }
+      }
+    }
+  }
+}

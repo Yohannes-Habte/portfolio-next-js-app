@@ -3,15 +3,98 @@
 
 .home-page {
   .home-page-container {
-    .home-page-title {
+    @include gridThreeColumns;
+    row-gap: 2rem;
+    column-gap: 2rem;
+ 
+ 
+    // User profile
+    .user-profile {
+      @include shadow2;
+
+      .my-profile {
+        @include flexRow;
+        justify-content: space-between;
+
+        .image-container {
+          display: flex;
+          flex-direction: column;
+
+          .image {
+            object-fit: cover;
+          }
+
+          .figcaption {
+            @include flexRow;
+            justify-content: center;
+
+            .icon {
+              font-size: 2rem;
+              color: #0077b6;
+              cursor: pointer;
+
+              &:hover {
+                color: $tomato;
+              }
+            }
+          }
+        }
+
+        .username-profession {
+          @include flexColumn;
+          gap: 2rem;
+        }
+      }
+
+      // CV download and chat
+
+      .download-cv-chat {
+        @include flexRow;
+        margin-top: 1rem;
+
+        .cv-download {
+          @include button2;
+        }
+
+        .chat {
+          @include button2;
+        }
+      }
     }
 
-    .home-page-sections-wrapper {
-      .user-profile-and-mission {
-        .user-profile {
-          .image-container {
-            .user-photo {
-              object-fit: contain;
+    // Career profile
+    .career-profile {
+      @include shadow2;
+
+      .career-title {
+        @include title;
+        font-size: $afs;
+        text-align: left;
+      
+      }
+
+      .career-details {
+        .career-details-title {
+          @include subTitle;
+        }
+
+        .image-container {
+          .image {
+            object-fit: cover;
+          }
+
+          .figcaption-career {
+            @include flexRow;
+            justify-content: space-between
+          }
+
+          .figcaption {
+            @include flexColumn;
+            font-size: $afs;
+            margin-top: 1rem;
+
+            span {
+              list-style: circle;
             }
           }
         }

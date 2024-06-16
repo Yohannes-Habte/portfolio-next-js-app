@@ -27,7 +27,6 @@ const ContactForm = () => {
           <li>Address</li>
           <li>Email</li>
           <li>Phone</li>
-          <li>WhatsApp</li>
           <li>Twitter</li>
           <li>LinkedIn</li>
         </ul>

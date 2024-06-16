@@ -1,113 +1,196 @@
 import Image from "next/image";
-import React from "react";
 import "./page.scss";
+import Link from "next/link";
+import { FaGithubSquare } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaXingSquare } from "react-icons/fa";
+// import { init } from "ityped";
+// import { useEffect, useRef } from "react";
 
 const page = () => {
+  // Animation using iTyped
+ // const careerRef = useRef();
+
+  // useEffect(() => {
+  //   init(careerRef.current, {
+  //     showCursor: true,
+  //     backDelay: 2000,
+  //     backSpeed: 50,
+  //     strings: [
+  //       "MongoDB",
+  //       "Express",
+  //       "React",
+  //       "Next.js",
+  //       "Redu",
+  //       "Node.js",
+  //       "Linus",
+  //       "Apache",
+  //       "MySQL",
+  //       "PHP",
+  //       "Project Manager",
+  //       "Strategic Planner",
+  //       "Researcher",
+  //       "Lecturer",
+  //     ],
+  //   });
+  // }, []);
+
   return (
     <main className="home-page page">
       <section className="home-page-container">
-        <h1 className="home-page-title">Home page </h1>
-        <article className="home-page-sections-wrapper">
-          {/*Profile Section */}
-          <section className="user-profile-and-mission section">
-            <aside className="user-profile">
-              <figure className="image-container">
-                <Image
-                  src={"/myPhoto.png"}
-                  alt="User Photo"
-                  width={600}
-                  height={400}
-                  className="user-photo"
-                  priority
-                />
-                <figcaption>
-                  <a href="">Github</a>
-                  <a href="">LinkedIn</a>
-                  <a href="">WhatsApp</a>
-                </figcaption>
-              </figure>
-              <h3>Yohannes Habtemariam</h3>
+        {/* User Profile Section */}
+        <section className="user-profile">
+          <article className="my-profile">
+            <figure className="image-container">
+              <Image
+                src={"/myPhoto.png"}
+                alt="User Photo"
+                width={150}
+                height={200}
+                className="image"
+                priority
+              />
+              <figcaption className="figcaption">
+                <Link href="https://github.com/Yohannes-Habte">
+                  <FaGithubSquare className="icon" />
+                </Link>
+
+                <Link href="https://www.linkedin.com/in/yohannes-habtemariam/">
+                  <FaLinkedin className="icon" />
+                </Link>
+
+                <Link href="https://www.xing.com/profile/Yohannes_Habtemariam4">
+                  <FaXingSquare className="icon" />
+                </Link>
+              </figcaption>
+            </figure>
+            <aside className="username-profession">
+              <h2>Yohannes Habtemariam</h2>
+
+              <h4>Full Stack Developer</h4>
+              <h4> Business Administrator </h4>
+
+              <>
+                {" "}
+                {/* <span ref={careerRef}></span>{" "} */}
+              </>
             </aside>
+          </article>
 
-            <article>
-              <h3> My Mission </h3>
-              <p>
-                The mission of life is to serve others with love. Service then
-                pays off according to what you serve others. That is why I am
-                always happy to serve others with all my heart, mind, soul and
-                body. Passionate Fullstack Web Developer with 7+ years of
-                professional experience in business administration. Equipped
-                with strong project management and presentation skills due to
-                work in research, consultancy and lecturing. Looking for an
-                exciting new challenge to build innovative solutions. Confident
-                and look forward to bringing IT and business management together
-                for the benefit of stakeholders.
-              </p>
-            </article>
-          </section>
+          <aside className="download-cv-chat">
+            <h3 className="cv-download"> Download CV</h3>
+            <Link className="chat" href={"/contact"}>
+              {" Let's Talk "}{" "}
+            </Link>
+          </aside>
+        </section>
 
-          {/* Web and App Development Section */}
-          <section className="web-and-app-development-section section">
-            <h3>Web & App Development </h3>
-            <article>
-              <h3>MERN Stack</h3>
-              <figure>
-                <Image src={"/myPhoto.png"} alt="" width={500} height={500} />
-                <figcaption>
-                  <span>MongoDB</span>
-                  <span>Express.JS</span>
-                  <span>React.Js</span>
-                  <span>Node.Js</span>
-                  <span>Next.Js</span>
-                </figcaption>
-              </figure>
-            </article>
+        {/* Career Profile Section */}
 
-            <article>
-              <h3> Additional Stack </h3>
-              <figure>
-                <Image src={"/myPhoto.png"} alt="" width={500} height={500} />
-                <figcaption>
-                  <span>Vanella.js</span>
-                  <span>PHP</span>
-                  <span>mySQL</span>
-                  <span>XAMP</span>
-                  <span>React Native</span>
-                </figcaption>
-              </figure>
-            </article>
-          </section>
-          {/* Business Administration Section */}
-          <section className="business-administration-mission section">
-            <h3> Business Administration </h3>
+        <section className="career-profile">
+          <h3 className="career-title">Web & App Development </h3>
+          <article className="career-details">
+            <h3 className="career-details-title">MERN Stack</h3>
+            <figure className="image-container">
+              <Image
+                src={"/MERN-stack.png"}
+                alt=""
+                width={410}
+                height={200}
+                className="image"
+              />
+              <figcaption className="figcaption-career">
+                <span>MongoDB</span>
+                <span>Express.JS</span>
+                <span>React.Js</span>
+                <span>Node.Js</span>
+              </figcaption>
+            </figure>
+          </article>
+        </section>
 
-            <article>
-              <h3> Business Consultant </h3>
-              <figure>
-                <Image src={"/myPhoto.png"} alt="" width={500} height={500} />
-                <figcaption>
-                  <span>Strategic Plan Development</span>
-                  <span>Business Research</span>
-                  <span>Project Management</span>
-                  <span>Personal Development</span>
-                </figcaption>
-              </figure>
-            </article>
+        <section className="career-profile">
+          <h3 className="career-title">Web & App Development </h3>
+          <article className="career-details">
+            <h3 className="career-details-title">LAMP Stack</h3>
+            <figure className="image-container">
+              <Image
+                src={"/LAMP-stack.jpg"}
+                alt=""
+                width={410}
+                height={200}
+                className="image"
+              />
+                 <figcaption className="figcaption-career">
+                <span>L - Linus</span>
+                <span>A - Apache</span>
+                <span>M - MySQL</span>
+                <span>P - PHP</span>
+              </figcaption>
+            </figure>
+          </article>
+        </section>
 
-            <article>
-              <h3> Lecturing </h3>
-              <figure>
-                <Image src={"/myPhoto.png"} alt="" width={500} height={500} />
-                <figcaption>
-                  <span>Postgraduate & Undergraduate Lecturer</span>
-                  <span>Research Supervisor</span>
-                  <span>Workshop Facilitator</span>
-                  <span>Invigilator</span>
-                </figcaption>
-              </figure>
-            </article>
-          </section>
-        </article>
+        <section className="career-profile">
+          <h3 className="career-title">Web & App Development </h3>
+          <article className="career-details">
+            <h3 className="career-details-title">Additional Stack</h3>
+            <figure className="image-container">
+              <Image
+                src={"/additional-stack.png"}
+                alt=""
+                width={350}
+                height={300}
+                className="image"
+              />
+            </figure>
+          </article>
+        </section>
+
+        <section className="career-profile">
+          <h3 className="career-title">Business Administration </h3>
+          <article className="career-details">
+            <h3 className="career-details-title"> Business Consultant </h3>
+            <figure className="image-container">
+              <Image
+                src={"/business-consultant.jpg"}
+                alt=""
+                width={350}
+                height={150}
+                className="image"
+              />
+              <figcaption className="figcaption">
+                <span>Strategic Plan Development</span>
+                <span>Leadership</span>
+                <span>Project Management</span>
+                <span>Personal Development</span>
+              </figcaption>
+            </figure>
+          </article>
+        </section>
+
+        <section className="career-profile">
+          <h3 className="career-title">Business Administration </h3>
+          <article className="career-details">
+            <h3 className="career-details-title"> Research and Lecturing </h3>
+            <figure className="image-container">
+              <Image
+                src={"/myPhoto.png"}
+                alt=""
+                width={150}
+                height={200}
+                className="image"
+              />
+
+              <figcaption className="figcaption">
+                <span>Postgraduate & Undergraduate Lecturer</span>
+                <span>Research Supervisor</span>
+                <span>Workshop Facilitator</span>
+                <span>Business Research</span>
+              </figcaption>
+            </figure>
+          </article>
+        </section>
       </section>
     </main>
   );

@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className="header">
       <h3>
-        <Link href={"/"}> Logo </Link>
+        <Link href={"/"}>  YH - Portfolio </Link>
       </h3>
 
       <Navbar />

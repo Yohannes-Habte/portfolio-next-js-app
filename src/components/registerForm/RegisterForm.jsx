@@ -6,6 +6,9 @@ import { useEffect } from "react";
 import { useFormState } from "react-dom";
 import "./.RegisterForm.scss";
 import { createAccount } from "../../lib/controller/userController.js";
+import { FaUser } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { RiLockPasswordFill } from "react-icons/ri";
 
 const RegisterForm = () => {
   const [state, formAction] = useFormState(createAccount, undefined);
@@ -19,6 +22,9 @@ const RegisterForm = () => {
   return (
     <form action={formAction} className="sign-up-form">
       <div className="input-container">
+        <span>
+          <FaUser className="icon" />
+        </span>
         <input
           type="text"
           name="username"
@@ -35,6 +41,9 @@ const RegisterForm = () => {
 
       {/* Email */}
       <div className="input-container">
+        <span>
+          <MdEmail className="icon" />
+        </span>
         <input
           type="email"
           name="email"
@@ -51,6 +60,9 @@ const RegisterForm = () => {
 
       {/* Password */}
       <div className="input-container">
+        <span>
+          <RiLockPasswordFill className="icon" />
+        </span>
         <input
           type="password"
           name="password"
