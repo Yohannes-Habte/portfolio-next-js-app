@@ -115,6 +115,23 @@ const AboutPage = () => {
             </p>
           </article>
         </div>
+
+        {/* Testimonial Section */}
+        <section className="recommendation-letters-wrapper">
+          <h2 className="recommendation-letters-title">
+            Recommendation Letters
+          </h2>
+
+          <figure>
+            <Image
+              src={"/additional-stack.png"}
+              alt=""
+              width={1000}
+              height={500}
+            />
+            <figcaption>Title of recommendation writer</figcaption>
+          </figure>
+        </section>
       </section>
     </main>
   );

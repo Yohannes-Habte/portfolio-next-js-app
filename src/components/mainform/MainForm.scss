@@ -10,7 +10,7 @@
     @include flexColumn;
 
     .inputs-wrapper {
-      @include twoGridTemplateEqualColumns;
+      @include gridTwoColumns;
     }
 
     .input-container {

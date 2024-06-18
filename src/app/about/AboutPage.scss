@@ -25,7 +25,6 @@
         }
 
         .core-values-wrapper {
-
           .my-values {
             @include subTitle;
           }
@@ -43,13 +42,11 @@
       }
     }
 
-
     .experience-projects-social-services-wrapper {
       @include gridThreeColumns;
       background-color: #edf6f9;
 
       .box-wrapper {
-
         .summary {
           @include flexCenter;
           background-color: #caf0f8;
@@ -75,6 +72,18 @@
           @include paragraph;
           margin: 1rem 0;
         }
+      }
+    }
+
+    .recommendation-letters-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .recommendation-letters-title {
+        @include subTitle;
+        margin-top: 2rem;
       }
     }
   }

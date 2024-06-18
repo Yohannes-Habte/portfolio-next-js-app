@@ -9,7 +9,6 @@ const links = [
   { title: "About", path: "/about" },
   { title: "Experience", path: "/experience" },
   { title: "Portfolio", path: "/portfolio" },
-  { title: "Testimonial", path: "/testimonial" },
   { title: "Contact", path: "/contact" },
 ];
 

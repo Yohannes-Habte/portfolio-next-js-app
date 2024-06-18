@@ -20,7 +20,7 @@
         }
 
         .asides-box-container {
-          @include twoGridTemplateEqualColumns;
+          @include gridTwoColumns;
         
           padding: 1rem;
           .aside-box {

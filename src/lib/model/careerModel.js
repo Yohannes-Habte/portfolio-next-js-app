@@ -4,13 +4,13 @@ const { Schema } = mongoose;
 
 const careerSchema = new Schema(
   {
-    mernStack: { type: String, required: true },
-    lampStack: { type: String, required: true },
-    additionalStack: { type: String, required: true },
+    mernStack: { type: String },
+    lampStack: { type: String },
+    additionalStack: { type: String },
     researchSkill: { type: String },
-    managementSkill: { type: String, required: true },
-    coreValue: { type: String, required: true },
-    goal: { type: String, required: true },
+    managementSkill: { type: String },
+    coreValue: { type: String },
+    goal: { type: String },
     image: { type: String },
   },
   {

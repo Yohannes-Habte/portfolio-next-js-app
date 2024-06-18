@@ -3,63 +3,118 @@
 
 .home-page {
   .home-page-container {
-    @include gridThreeColumns;
-    row-gap: 2rem;
-    column-gap: 2rem;
- 
- 
-    // User profile
-    .user-profile {
-      @include shadow2;
 
-      .my-profile {
-        @include flexRow;
-        justify-content: space-between;
+    // Hero section wrapper
+    .hero-section-wrapper {
+      @include gridTwoColumns;
+      row-gap: 2rem;
+      column-gap: 2rem;
 
-        .image-container {
-          display: flex;
-          flex-direction: column;
+      // User profile
+      .user-profile {
+        @include shadow2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-          .image {
-            object-fit: cover;
+        .my-profile {
+          @include flexRow;
+
+          .user-image-container {
+            display: flex;
+            flex-direction: column;
+
+            .image {
+              object-fit: cover;
+              border-radius: 0.3rem;
+            }
+
+            .figcaption {
+              @include flexRow;
+              justify-content: center;
+
+              .icon {
+                font-size: 2rem;
+                color: #0077b6;
+                cursor: pointer;
+
+                &:hover {
+                  color: $tomato;
+                }
+              }
+            }
           }
 
-          .figcaption {
-            @include flexRow;
-            justify-content: center;
+          .username-profession {
+            @include flexColumn;
+            gap: 2rem;
+          }
+        }
 
-            .icon {
-              font-size: 2rem;
-              color: #0077b6;
-              cursor: pointer;
+        // CV download and chat
 
-              &:hover {
-                color: $tomato;
+        .download-cv-chat {
+          @include flexRow;
+          margin-top: 1rem;
+
+          .cv-download {
+            @include button2;
+          }
+
+          .chat {
+            @include button2;
+          }
+        }
+      }
+
+      //Hero Career profile
+      .hero-career-profile {
+        @include shadow2;
+
+        .career-title {
+          @include title;
+          font-size: $afs;
+          text-align: left;
+        }
+
+        .career-details {
+          .career-details-title {
+            @include subTitle;
+          }
+
+          .hero-image-container {
+            .image {
+              object-fit: cover;
+            }
+
+            .figcaption-career {
+              @include flexRow;
+              justify-content: space-around;
+              padding: 0 2rem;
+            }
+
+            .figcaption {
+              @include flexColumn;
+              font-size: $afs;
+              margin-top: 1rem;
+
+              span {
+                list-style: circle;
               }
             }
           }
         }
-
-        .username-profession {
-          @include flexColumn;
-          gap: 2rem;
-        }
       }
+    }
 
-      // CV download and chat
+    // Career profile wrapper
 
-      .download-cv-chat {
-        @include flexRow;
-        margin-top: 1rem;
-
-        .cv-download {
-          @include button2;
-        }
-
-        .chat {
-          @include button2;
-        }
-      }
+    .career-profile-wrapper {
+      @include gridThreeColumns;
+      row-gap: 2rem;
+      column-gap: 2rem;
+      margin-top: 2rem
     }
 
     // Career profile
@@ -70,7 +125,6 @@
         @include title;
         font-size: $afs;
         text-align: left;
-      
       }
 
       .career-details {
@@ -85,7 +139,7 @@
 
           .figcaption-career {
             @include flexRow;
-            justify-content: space-between
+            justify-content: space-between;
           }
 
           .figcaption {
