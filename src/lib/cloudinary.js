@@ -8,7 +8,7 @@ cloudinary.config({
 });
 
 // export const uploadImageToCloudinary = async (file) => {
-//   console.log("file=", file)
+
 //   return new Promise((resolve, reject) => {
 //     cloudinary.uploader.upload(file.path, (error, result) => {
 //       if (error) {
@@ -21,11 +21,15 @@ cloudinary.config({
 // };
 
 export const uploadFile = async (file) => {
+  const fileBuffer = await file.arrayBuffer();
+  const mime = file.type;
+  const encoding = "base64";
+  const base64Data = Buffer.from(fileBuffer).toString("base64");
+  const filePath = "data:" + mime + ";" + encoding + "," + base64Data;
+
   try {
-    // Ensure file is a string before passing it to upload function
-    const result = await cloudinary.uploader.upload(file);
-    console.log("Upload successful:", result);
-    return result;
+    const result = await cloudinary.uploader.upload(filePath);
+    return result.url;
   } catch (error) {
     console.error("Upload error:", error);
     throw error;

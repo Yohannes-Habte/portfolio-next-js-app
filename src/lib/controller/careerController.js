@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache.js";
 import { connectToDb } from "../db/connection.js";
 import { Career } from "../model/careerModel.js";
-import { uploadFile, uploadImageToCloudinary } from "../cloudinary.js";
+import { uploadFile, } from "../cloudinary.js";
 
 // =================================================================
 // Create content from skills form
@@ -21,16 +21,7 @@ export const createCareer = async (previousState, formData) => {
     image,
   } = Object.fromEntries(formData);
 
-  const fileName = image.name;
-
-  const cloudinaryUrl =
-    "https://res.cloudinary.com/your-cloud-name/image/upload/your-image.jpg";
-
-  const filePath = `https://res.cloudinary.com/dpxacfxeq/image/upload/v1718626739/fv2nygr7nxohuh7shknr.webp`;
-
-
-  // const filePath = image.path; // Extract path from file object
-  // const imageUrl = await uploadFile(filePath);
+  const imageUrl = await uploadFile(image);
 
   try {
     connectToDb();
@@ -43,8 +34,7 @@ export const createCareer = async (previousState, formData) => {
       managementSkill,
       coreValue,
       goal,
-      image: imagePath,
-      // image: imageUrl,
+      image: imageUrl,
     });
 
     await career.save();
